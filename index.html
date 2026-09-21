@@ -6,73 +6,286 @@
 <title>Зайцев Станислав Юрьевич</title>
 
 <style>
-    * {
-        box-sizing: border-box;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #020817;
+    color: white;
+}
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,8,23,.93) 0%,
+            rgba(2,8,23,.60) 50%,
+            rgba(2,8,23,.20) 100%
+        ),
+        url('bg.jpg') center/cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 78px;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    background: rgba(2,8,23,.35);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #1683ff;
+}
+
+nav a {
+    color: #dbe7f8;
+    text-decoration: none;
+    margin-left: 35px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #1683ff;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 70px 6%;
+}
+
+.content {
+    max-width: 720px;
+}
+
+.small {
+    font-size: 20px;
+    color: #c5d7ef;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 1.03;
+    margin: 0 0 25px;
+}
+
+h2 {
+    font-size: 38px;
+    margin: 0 0 10px;
+}
+
+.name {
+    color: #1683ff;
+}
+
+.desc {
+    font-size: 20px;
+    line-height: 1.55;
+    color: #b8c9df;
+    max-width: 650px;
+}
+
+.buttons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 24px;
+    border: 2px solid #1683ff;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgba(2,8,23,.25);
+}
+
+.btn:hover {
+    background: #1683ff;
+}
+
+footer {
+    min-height: 82px;
+    border-top: 1px solid rgba(255,255,255,.14);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 6%;
+    color: #9eb2cd;
+    background: rgba(2,8,23,.75);
+}
+
+footer a {
+    color: #cfe0f5;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        height: auto;
+        padding: 18px 5%;
+        align-items: flex-start;
     }
 
-    body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #111827, #030712);
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card {
-        width: 90%;
-        max-width: 700px;
-        padding: 50px 30px;
-        border-radius: 25px;
-        background: rgba(255,255,255,0.08);
-        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-        backdrop-filter: blur(10px);
-    }
-
-    h1 {
-        font-size: 42px;
-        margin-bottom: 25px;
-    }
-
-    p {
-        font-size: 22px;
-        line-height: 1.5;
-    }
-
-    .email {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 15px 25px;
-        border-radius: 12px;
-        background: #2563eb;
-        color: white;
-        text-decoration: none;
+    .logo {
         font-size: 18px;
     }
 
-    .email:hover {
-        background: #1d4ed8;
+    nav a {
+        margin-left: 10px;
+        font-size: 13px;
     }
+
+    main {
+        padding: 50px 6%;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .small {
+        font-size: 16px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        font-size: 13px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<div class="card">
-    <h1>Зайцев Станислав Юрьевич</h1>
+<section class="hero">
 
-    <p>
-        Всем привет!<br>
-        этот сайт создал Зайцев Станислав Юрьевич
-    </p>
+<header>
+    <div class="logo">
+        <span>Зайцев</span> Станислав Юрьевич
+    </div>
 
-    <a class="email" href="mailto:stasz0698@gmail.com">
-        📧 Связаться со мной
-    </a>
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#about">Обо мне</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+</header>
+
+<main id="home">
+
+<div class="content">
+
+<p class="small">
+    Добро пожаловать на мой сайт!
+</p>
+
+<h1>
+    Всем привет!
+</h1>
+
+<h2>
+    Сайт создал
+</h2>
+
+<h2 class="name">
+    Зайцев Станислав Юрьевич
+</h2>
+
+<p id="about" class="desc">
+    Рад, что вы зашли на мой сайт.
+    Здесь вы можете узнать немного обо мне
+    и связаться со мной.
+</p>
+
+<div class="buttons">
+
+<a class="btn" href="mailto:stasz0698@gmail.com">
+    ✉️ Связаться со мной
+</a>
+
+<a class="btn"
+   href="https://vk.ru/id645774208"
+   target="_blank"
+   rel="noopener">
+    VK &nbsp; Моя страница ВК
+</a>
+
 </div>
 
+</div>
+
+</main>
+
+<footer id="contacts">
+
+<span>
+    Зайцев Станислав Юрьевич
+</span>
+
+<span>
+    Спасибо, что заглянули на мой сайт!
+</span>
+
+<span>
+    <a href="mailto:stasz0698@gmail.com">
+        stasz0698@gmail.com
+    </a>
+
+    &nbsp; | &nbsp;
+
+    <a href="https://vk.ru/id645774208"
+       target="_blank"
+       rel="noopener">
+        VK
+    </a>
+</span>
+
+</footer>
+
+</section>
+
 </body>
-  </html>
+   </html>
